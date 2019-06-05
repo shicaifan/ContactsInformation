@@ -1,0 +1,13 @@
+.container {
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    margin-top:8%;
+}
+
+table {
+    margin-top: 4%;
+    background-color: lightyellow;
+}
