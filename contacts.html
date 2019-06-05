@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "contacts.css" />
+
+</head>
+<body>
+
+<div id="contactsInfo"></div>
+<script id="list" type="text/x-handlebars-template">
+    <div class="container">
+        <h1>Contacts Information</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Ip address</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- Use handlebars to iterate through the array of objects -->
+                {{#each contactDetails}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{first_name}}</td>
+                    <td>{{last_name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{ip_address}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+
+</script>
+
+<script src='jquery-3.4.1.min.js'></script>
+<script src='handlebars-v4.1.2.js'></script>
+<script src='contacts.js'></script>
+</body>
+</html>
